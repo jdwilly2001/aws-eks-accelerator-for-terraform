@@ -63,10 +63,8 @@ module "aws_eks" {
   cluster_endpoint_private_access                = var.cluster_endpoint_private_access
   cluster_endpoint_public_access                 = var.cluster_endpoint_public_access
   cluster_create_endpoint_private_access_sg_rule = var.cluster_endpoint_private_access
-  cluster_endpoint_private_access_cirds          = var.cluster_endpoint_private_cidrs
+  cluster_endpoint_private_access_cidrs          = var.cluster_endpoint_private_cidrs
 
-
-  cluster_additional_security_group_ids = var.cluster_additional_security_group_ids
   worker_create_security_group          = var.worker_create_security_group
   cluster_log_retention_in_days         = var.cluster_log_retention_in_days
 
