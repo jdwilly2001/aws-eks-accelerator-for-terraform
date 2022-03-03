@@ -63,8 +63,9 @@ module "aws_eks" {
   cluster_endpoint_private_access = var.cluster_endpoint_private_access
   cluster_endpoint_public_access  = var.cluster_endpoint_public_access
 
-  worker_create_security_group  = var.worker_create_security_group
-  cluster_log_retention_in_days = var.cluster_log_retention_in_days
+  cluster_additional_security_group_ids = var.cluster_additional_security_group_ids
+  worker_create_security_group          = var.worker_create_security_group
+  cluster_log_retention_in_days         = var.cluster_log_retention_in_days
 
   # IRSA
   enable_irsa = var.enable_irsa

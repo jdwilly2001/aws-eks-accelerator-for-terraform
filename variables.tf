@@ -136,6 +136,12 @@ variable "cluster_log_retention_period" {
   default     = 7
   description = "Number of days to retain cluster logs"
 }
+variable "cluster_additional_security_group_ids" {
+  description = "A list of additional security group ids to attach to the cluster endpoint"
+  type        = list(string)
+  default     = []
+}
+
 
 variable "worker_additional_security_group_ids" {
   description = "A list of additional security group ids to attach to worker instances"
