@@ -136,8 +136,9 @@ variable "cluster_log_retention_period" {
   default     = 7
   description = "Number of days to retain cluster logs"
 }
-variable "cluster_additional_security_group_ids" {
-  description = "A list of additional security group ids to attach to the cluster endpoint"
+
+variable "cluster_endpoint_private_cidrs" {
+  description = "A list of CIDR to allow to the private endpoint"
   type        = list(string)
   default     = []
 }
